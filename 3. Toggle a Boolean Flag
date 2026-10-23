@@ -1,0 +1,15 @@
+// Write a program that stores a boolean variable representing whether a light is on, prints its state, flips it to the opposite value without using if-else (a direct boolean negation), and prints the new state. Input: True  Output: On, then Off
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool light_on = true;
+
+    cout << "Light is " << (light_on ? "On" : "Off") << endl;
+
+    light_on = !light_on;
+
+    cout << "Light is " << (light_on ? "On" : "Off") << endl;
+
+    return 0;
+}
