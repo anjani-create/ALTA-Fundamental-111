@@ -1,0 +1,29 @@
+// Write a program that takes weight (kg) and height (m), computes BMI = weight / height^2, and categorizes it as Underweight (<18.5), Normal (18.5-24.9), Overweight (25-29.9), or Obese (30+) using nested if-else.
+#include <iostream>
+using namespace std;
+int main() {
+    double weight , height , bmi;
+    cout << "Enter weight (kg):";
+    cin >> weight;
+    cout << "Enter height (m):";
+    cin >> height;
+    bmi = weight / (height * height);
+    
+    if (bmi < 18.5) {
+        cout << "Underweight" << endl;
+    }
+
+    else if (bmi>= 18.5 && bmi <= 24.9) {
+        cout <<"Normal" << endl;
+    }
+
+    else if (bmi >= 25 && bmi <= 29.9) {
+        cout << "Overweight" << endl;
+    }
+
+    else {
+        cout << "Obese" << endl;
+    }
+
+
+}
