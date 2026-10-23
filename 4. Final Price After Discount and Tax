@@ -1,0 +1,19 @@
+// Write a program that calculates the final price of an item after applying a 10% discount, then adding 18% tax on the discounted price. Input: price = 1000  Output: 1062
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double price, discounted_price, final_price;
+
+    cout << "Enter the original price of the item: ";
+    cin >> price;
+
+    discounted_price = price - (price * 0.1);
+
+    final_price = discounted_price + (discounted_price * 0.18);
+
+    cout << "Final price: " << final_price << endl;
+    
+    return 0;
+}
