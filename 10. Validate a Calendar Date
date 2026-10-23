@@ -1,0 +1,38 @@
+// Write a program that checks whether a given day, month, and year form a valid calendar date, using if-else to account for the correct number of days in each month and leap years for February. Input: 30 2 2024  Output: Invalid Date
+
+#include <iostream>
+using namespace std;
+int main () {
+    int day, month, year;
+    cout << "Enter day: ";
+    cin >> day;
+    cout << "Enter month: ";
+    cin >> month;
+    cout << "Enter year: ";
+    cin >> year;
+
+    bool is_leap_year = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+    bool valid_date = false;
+
+    if (month >= 1 && month <= 12) {
+        if (month == 2) {
+            if ((is_leap_year && day >= 1 && day <= 29) || (!is_leap_year && day >= 1 && day <= 28)) {
+                valid_date = true;
+            }
+        } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            if (day >= 1 && day <= 30) {
+                valid_date = true;
+            }
+        } else {
+            if (day >= 1 && day <= 31) {
+                valid_date = true;
+            }
+        }
+    }
+
+    if (valid_date) {
+        cout << "Valid Date" << endl;
+    } else {
+        cout << "Invalid Date" << endl;
+    }
+}
