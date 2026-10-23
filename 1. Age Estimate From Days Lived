@@ -1,0 +1,18 @@
+// Write a program that takes the number of days a person has lived and estimates their age using integer division by 365, printing both the whole years and the remainder days. Input: 7305  Output: 20 years, 5 days.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int days_lived;
+
+    cout << "Enter total days lived:";
+    cin >> days_lived;
+
+    int years = days_lived / 365;
+    int remaining_days = days_lived % 365;
+
+    cout << "Age Estimate: " << years << "years and " << remaining_days << "days." << endl;
+
+    return 0;
+}
