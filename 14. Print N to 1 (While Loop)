@@ -1,0 +1,14 @@
+// Write a program to print all numbers from N down to 1 using a while loop. Input: N = 5  Output: 5 4 3 2 1
+
+#include <iostream>
+using namespace std;
+int main() {
+    int N;
+    cout << "Enter a number:";
+    cin >> N;
+    while (N >= 1) {
+        cout << N << " ";
+        N--;
+    }
+    return 0;
+}
