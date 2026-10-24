@@ -1,0 +1,33 @@
+// Write a program that takes two numbers and an operator symbol (+, -, *, /) and performs the corresponding operation using switch-case on the operator. Input: 10 * 4  Output: 40
+
+#include <iostream>
+using namespace std;
+int main() {
+    double a,b;
+    char c;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+    cout << "Enter operator (+, -, *, /):";
+    cin >> c;
+
+    switch(c) {
+        case '+':
+            cout << a+b << endl;
+            break;
+        case '-':
+            cout << a-b << endl;
+            break;
+        case '*':
+            cout << a*b << endl;
+            break;
+        case '/':
+            if(b != 0) {
+                cout << a/b << endl;
+            } 
+            else {
+                cout << "Error: Division by zero" << endl;
+            }
+    }
+}
