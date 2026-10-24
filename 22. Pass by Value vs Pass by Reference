@@ -1,0 +1,26 @@
+// In C/C++, write a function using a pointer or reference parameter (&) to modify a caller's variable, and contrast it with a plain pass-by-value version that does not. In Java/JS, demonstrate the same limitation Java has for primitives: write a method that tries to modify an int parameter (it will NOT affect the caller's variable -- Java has no true pass-by-reference), then contrast this by modifying a field inside a passed object or array instead (which DOES affect the caller's data, since the object reference itself was passed).
+#include <iostream>
+using namespace std;
+
+void pass_by_value(int a) {
+    a = a*20; // This change will not affect the caller's variable
+}
+void pass_by_reference(int &a) {
+    a = a+20; // This change will affect the caller's variable
+}
+
+int main(){
+    int x = 10;
+    int y = 20;
+    cout << "Before pass_by_value: " << x << endl; // Output: 10
+    pass_by_value(x);
+    cout << "After pass_by_value: " << x << endl; // Output: 10 (Unchanged)
+
+    cout << "Before pass_by_reference: " << y << endl; // Output: 20
+    pass_by_reference(y);
+    cout << "After pass_by_reference: " << y << endl; // Output: 40 (Modified!)
+
+    return 0;
+}
+
+
