@@ -1,0 +1,14 @@
+// Write a program that loops through numbers starting from 1 and stops (using break) as soon as it finds the first number divisible by 7, printing that number.
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 100; i++) {
+        if (i % 7 == 0) {
+            cout << "The first number divisible by 7 is: " << i << endl;
+            break; 
+        }
+    }
+    
+    return 0;
+}
