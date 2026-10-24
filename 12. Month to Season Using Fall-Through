@@ -1,0 +1,33 @@
+// Write a program that takes a month number (1-12) and prints its season (Winter, Summer, Monsoon, Autumn) using switch-case with intentional fall-through so multiple month cases share one season block.
+#include <iostream>
+using namespace std;
+int main() {
+    int month;
+    cout << "Enter month number (1-12):";
+    cin >> month;
+    switch(month) {
+        case 12:
+        case 1:
+        case 2:
+            cout << "Winter" << endl;
+            break;
+        case 3:
+        case 4:
+        case 5:
+            cout << "Summer" << endl;
+            break;
+        case 6:
+        case 7:
+        case 8:
+            cout << "Monsoon" << endl;
+            break;
+        case 9:
+        case 10:
+        case 11:
+            cout << "Autumn" << endl;
+            break;
+        default:
+            cout << "Invalid month number" << endl;
+    }
+    return 0;
+}
